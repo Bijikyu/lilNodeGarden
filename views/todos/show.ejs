@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" class="sl-theme-dark">
+<head>
+  <%- include('../partials/head-content') %>
+  <!--<meta name="keywords" content="website, blog, foo, bar"> TODO: add metadata for site
+  <meta name="author" content="John Doe">
+  <meta name="publisher" content="John Doe">
+  <meta name="copyright" content="John Doe">
+  <meta name="description" content="This short description describes my website.">
+  <meta name="page-topic" content="Media">
+  <meta name="page-type" content="Blogging">
+  <meta name="audience" content="Everyone">-->
+</head>
+
+<body>
+   <h1>Todo #<%= todo.id %></h1>
+   <h3><%= todo.todo %></h3>
+   <h3>Complete: <%= todo.done ? 'Yes' : 'No' %></h3>
+	
+	
+	<%- include('../partials/footer') %>
+</body>

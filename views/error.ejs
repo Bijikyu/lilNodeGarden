@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head-content') %>
+    <!--<meta name="keywords" content="website, blog, foo, bar"> TODO: add metadata for site
+    <meta name="author" content="John Doe">
+    <meta name="publisher" content="John Doe">
+    <meta name="copyright" content="John Doe">
+    <meta name="description" content="This short description describes my website.">
+    <meta name="page-topic" content="Media">
+    <meta name="page-type" content="Blogging">
+    <meta name="audience" content="Everyone">-->
+</head>
+<body>
+<%- include('./partials/header') %>
+
+<div class="flex col center centerAlign">
+    <hr class='hidHr'>
+    <h1 class="wide"><%= error %></h1>
+    <p><%= error.status %></p>
+    <hr class='hidHr'>
+    <pre style="color: white"><%= error.stack %></pre>
+    <hr class='hidHr'>
+</div>
+
+<%- include('./partials/footer') %>
+</body>

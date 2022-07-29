@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class='whitePage' lang="en">
+<head>
+    <%- include('../partials/head-content') %>
+    <!--<meta name="keywords" content="website, blog, foo, bar"> TODO: add metadata for site
+    <meta name="author" content="John Doe">
+    <meta name="publisher" content="John Doe">
+    <meta name="copyright" content="John Doe">
+    <meta name="description" content="This short description describes my website.">
+    <meta name="page-topic" content="Media">
+    <meta name="page-type" content="Blogging">
+    <meta name="audience" content="Everyone">-->
+    <script src="https://cdn.tiny.cloud/1/qwnygkg089mzmryawup3v1z5onu99s4f07d0w6sdv5gyuqoj/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#bloggy',
+            setup: function (editor) {
+                editor.on('change', function () {
+                    editor.save();
+                });
+            }
+        });
+    </script>
+</head>
+<%- //include('../partials/header') %>
+
+<body>
+<main class="col">
+
+<div class="flex col center centerAlign col100">
+    <form class="flex col center centerAlign col100" action="/blogs" method="POST">
+        <div class="flex row between col100">
+            <button class='buttonLight' type="button"><a href="back" class="buttonLink">Cancel</a></button>
+            <button type="submit">Publish</button>
+        </div>
+        <div class="flex row around col100">
+            <input required type="text" name="title" id="title" placeholder='Title' maxlength="25"/>
+            <input required type="text" name="image" placeholder='Image URL (Link)' id="image"/>
+        </div>
+        <hr class='hidHr'>
+        <hr class='hidHr'>
+        <div class="flex col center centerAlign col100 pad15">
+            <textarea style="height: 80vh; width:85vw" required name="markdown" id="bloggy" placeholder='Type your tale...'></textarea>
+        </div>
+    </form>
+
+</div>
+
+<%-// include('../partials/footer') %>
+</main>
+</body>
+
+</html>

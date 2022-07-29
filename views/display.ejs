@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="sl-theme-dark">
+<head>
+  <%- include('partials/head-content') %>
+  <!--<meta name="keywords" content="website, blog, foo, bar"> TODO: add metadata for site
+  <meta name="author" content="John Doe">
+  <meta name="publisher" content="John Doe">
+  <meta name="copyright" content="John Doe">
+  <meta name="description" content="This short description describes my website.">
+  <meta name="page-topic" content="Media">
+  <meta name="page-type" content="Blogging">
+  <meta name="audience" content="Everyone">-->
+</head>
+<body>
+  <%- include('partials/header') %>
+  <main class='col'>
+    <hr class='hidHr'>
+    <hr class='hidHr'>    
+    <h1>Offering 2: What We Do</h1>
+    <div class='flex row between centerAlign col100'>
+      <div class='flex col evenly centerAlign'>
+        <img class='displayImg desktop' src="/images/displayImg.jpeg" alt="icon for product"/> <!--TODO: Change alt texxt and image-->
+        <img class='displayImg' src="/images/displayImg.jpeg" alt="icon for product"/>
+      </div>
+
+      <div class='flex col col60 card'>
+        <hr class='hidHr'>
+        <hr class='hidHr'>
+        <div class='flex center'>
+          <ul class='col offerlist'>
+            <li class='displayLi'>Point 1: an interesting point</li>
+            <li class='displayLi'>Point 2: an interesting point</li>
+            <li class='displayLi'>Point 3: an interesting point</li>
+            <li class='displayLi'>Point 4: an interesting point</li>
+            <li class='displayLi'>Point 5: an interesting point</li>
+          </ul>
+        </div>
+        <hr class='hidHr'>
+        <hr class='hidHr'>
+        <div class='col'>
+          <div class='flex mobileRow evenly'>
+            <a href="tel:15555555555"><img class='contactIcon' src="/images/phoneIcon.png" alt="Phone"/><hr class='hidHr'>PHONE</a> <!--TODO: phone # -->
+            <a href="mailto:name@domain.com?subject=subject text"><img class='contactIcon' src="/images/emailIcon.png" alt="Email"/><hr class='hidHr'>EMAIL</a> <!--TODO: email-->
+          </div>
+          <div>
+            <h3>Order Offering 2</h3>
+          </div>
+          <hr class='hidHr'>
+          <div>
+            <form action='https://formsapi.jabwn.com/key/p0yfEvzqAnax9BfZKJew' method='post' class="flex col center centerAlign col100"> <!--TODO: Unique https://formsapi.jabwn.com/ API-->
+              <label for='name'>Name</label>
+              <input type='text' name='name' required>
+              <hr class='hidHr'>
+              <p class='indicator'><span style='color:red'>* </span><small>INDICATES REQUIRED FIELD</small></p>
+              <hr class='hidHr'>
+              <div class='flex row col50'>
+                <div class="col100">
+                  <label for='email'>Email<span style='color:red'> *</span></label><hr class='hidHr'>
+                  <hr class='hidHr'>
+                  <input type='email' name='email' required>
+                  <hr class='hidHr'>
+                </div>
+                <div class="col100">
+                  <label for='phone'>Phone<span style='color:red'> *</span></label><hr class='hidHr'>
+                  <hr class='hidHr'>
+                  <input type='text' name='phone' required>
+                  <hr class='hidHr'>
+                </div>
+              </div>
+              <hr class='hidHr'>
+              <input type="hidden" name="_subject" value="Display Page Form"> <!--TODO: Set form name-->
+              <input type="hidden" name="_replyto" value="%email">
+              <input type="hidden" name="_after" value="https://www.google.com"> <!--TODO set redirect full path-->
+              <hr class='hidHr'>
+              <script></script> <!--TODO: iubunda privacy policy-->
+              <button type='submit'>Get Your X</button>
+            </form>
+            <hr class='hidHr'>
+          </div>
+        </div>
+      </div>
+      <div class='flex col'>
+        <img class='displayImg desktop' src="/images/displayImg.jpeg" alt="icon for product"/> <!--TODO: Change alt text and image-->
+        <img class='displayImg' src="/images/displayImg.jpeg" alt="icon for product"/>
+      </div>
+  </div>
+
+  <div class='flex centerAlign col panel'>
+      <hr class='hidHr'>
+      <img id='modalBtn' class='displayImg' src="/images/displayImg.jpeg" alt="icon for product"/> <!--Trigger modal--> <!--TODO: Change alt text and image-->
+
+      <div id='modal' class='modal'> <!--The modal-->
+          <img class='modalImg' src="/images/displayImg.jpeg" alt="icon for product"/>
+
+      </div>
+
+      <hr class='hidHr'>
+      <h2>More About Offering</h2>
+      <hr class='hidHr'>
+      <p class='explainer'>They done good. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur 
+          voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat 
+          iusto fuga praesentium optio, eaque rerum! Provident similique accusantium 
+          nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto 
+          voluptate aliquam.<br>
+          <br>
+          They done good. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur 
+          voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat 
+          iusto fuga praesentium optio, eaque rerum! Provident similique accusantium 
+          nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto 
+          voluptate aliquam.<br>
+          <br>
+          They done good. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur 
+          voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat 
+          iusto fuga praesentium optio, eaque rerum! Provident similique accusantium 
+          nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto 
+          voluptate aliquam.<br>
+          <br>
+      </p>
+      <form action='https://formsapi.jabwn.com/key/p0yfEvzqAnax9BfZKJew' method='post'> <!--TODO: Unique https://formsapi.jabwn.com/ API-->
+				<div class='flex row'>
+					<div>
+						<label for='name'>Name</label><hr class='hidHr'>
+						<hr class='hidHr'>
+						<input type='text' name='name' required>
+						<hr class='hidHr'>
+					</div>
+					<div>
+						<label for='email'>Email<span style='color:red'> *</span></label><hr class='hidHr'>
+						<hr class='hidHr'>
+						<input type='email' name='email' required>
+						<hr class='hidHr'>
+					</div>
+					<div>
+						<label for='phone'>Phone<span style='color:red'> *</span></label><hr class='hidHr'>
+						<hr class='hidHr'>
+						<input type='text' name='phone' required>
+						<hr class='hidHr'>
+					</div>
+				</div>
+				<hr class='hidHr'>
+				<p class='indicator'><span style='color:red'>* </span><small>INDICATES REQUIRED FIELD</small></p>
+				<hr class='hidHr'>
+				<input type="hidden" name="_subject" value="Display Page Form2"> <!--TODO: Set form name-->
+				<input type="hidden" name="_replyto" value="%email">
+				<input type="hidden" name="_after" value="https://www.google.com"> <!--TODO set redirect full path-->
+				<hr class='hidHr'>
+				<script></script> <!--TODO: iubunda privacy policy-->
+				<button type='submit'>Get Your X</button>
+      </form>
+      <hr class='hidHr'>
+      <hr class='hidHr'>
+    </div>
+  </main>
+  <%- include('./partials/footer') %>
+</body>
+</html>

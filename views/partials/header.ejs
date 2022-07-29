@@ -1,0 +1,41 @@
+<header>
+	<div class='desktop flex centerAlign'>
+		<a href='/'><img id='headerLogo' src="/images/logo.png"/></a>
+		<div>
+			<nav> 
+				<ul class="flex">
+					<%- include('./navLis') %>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class='mobile menuBox'>
+		<button class='menu'>Menu</button>
+		<div id='menu-drop'>
+			<nav> 
+				<ul class="flex col">
+					<li id='/' class='navLi'><a href='/'>Home</a></li>
+					<%- include('./navLis') %>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div>
+		<form>
+			<% if (user) { %>
+				<button class='menu' formaction='/logout'><img class="googleIcon">Log Out</button>
+			<% } else { %>
+				<button class='menu' formaction='/auth/google'><img class="googleIcon">Google Sign In</button>
+			<% } %>
+		</form>
+		<!--<ul> delete if button functions
+			<li>
+			<% if (user) { %>
+				<a href="/logout">Log Out</a>
+			<% } else { %>
+				<a href="/auth/google">Google Sign In</a>
+			<% } %>
+			</li>
+		</ul>-->
+	</div>
+</header>

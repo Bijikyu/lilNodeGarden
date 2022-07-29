@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="sl-theme-dark">
+<head>
+  <%- include('../partials/head-content') %>
+  <!--<meta name="keywords" content="website, blog, foo, bar"> TODO: add metadata for site
+  <meta name="author" content="John Doe">
+  <meta name="publisher" content="John Doe">
+  <meta name="copyright" content="John Doe">
+  <meta name="description" content="This short description describes my website.">
+  <meta name="page-topic" content="Media">
+  <meta name="page-type" content="Blogging">
+  <meta name="audience" content="Everyone">-->
+</head>
+
+<body>
+<%- include('../partials/header') %>
+<main class="col">
+	<hr class='hidHr'>
+	<hr class='hidHr'>
+		<div class="flex col col33 card between">
+			<div id="editModeOffDiv" class="flex col between">
+				<!--CARD SHOW VIEW-->
+				<hr class='hidHr'>
+				<div class="flex mobileRow between">
+					<form action="/items/<%= item.id %>?_method=DELETE" class="item-form" method="POST">
+						<button type="submit" class='item-button' title="DELETE">X</button>
+					</form>
+					<!--<a href="/items/<%=item.id%>/edit">Edit Item</a> for dedicated edit view-->
+					<button id='editModeOn' class="item-button">EDIT</button>
+				</div>
+				<h1><%= item.title %></h1>
+				<hr>
+				<hr class='hidHr'>
+				<div class="flex col evenly centerAlign">
+					<h3 class="itemText">Age</h3>
+					<hr class='hidHr'>										
+					<p class="itemText"><%= item.age %></p>
+					<hr class='hidHr'>										
+					<h3 class="itemText">Features</h3>	
+					<hr class='hidHr'>				
+					<p class="itemText"><%= item.features.join(', ') %></p>	
+					<hr class='hidHr'>									
+					<h3 class="itemText">Rating</h3>
+					<hr class='hidHr'>					
+					<p class="itemText"><%= item.rating %></p>
+					<hr class='hidHr'>
+					<h3 class="itemText">Approval</h3>
+					<hr class='hidHr'>					
+					<p class="itemText"><%= item.approved %></p>
+					<hr class='hidHr'>
+					<h3 class="itemText">Active</h3>
+					<hr class='hidHr'>					
+					<p class="itemText"><%= item.active ? 'Yes' : 'No'%></p>
+					<hr class='hidHr'>
+				</div>
+				<hr class='hidHr'>
+				<hr class='hidHr'>
+			</div>
+			<div id="editModeOnDiv" class="flex col between">
+				<!--CARD SHOW EDIT VIEW-->
+				<form action="/items/<%= item.id %>?_method=PUT" method="POST" autocomplete="off">
+					<hr class='hidHr'>
+					<div class="flex reverseRow">
+						<button id='editModeOff' class="item-button">CANCEL EDIT</button>
+					</div>
+					<div class="flex col evenly centerAlign">
+						<h3 class="itemText">Title</h3>
+						<hr class='hidHr'>
+						<input type='text' name="title" class="itemText" value=<%= item.title %>></input>
+						<hr class='hidHr'>
+						<hr>
+						<hr class='hidHr'>
+						<h3 class="itemText">Age</h3>
+						<hr class='hidHr'>										
+						<input type='text' name="age" class="itemText" value=<%= item.age %>></input>
+						<hr class='hidHr'>										
+						<h3 class="itemText">Features</h3>	
+						<hr class='hidHr'>		
+						<input type='text' name="features" class="itemText" value=<%= item.features.join(', ') %>></input>
+						<hr class='hidHr'>									
+						<h3 class="itemText">Rating</h3>
+						<hr class='hidHr'>					
+						<select type='text' name="rating"  class="itemText" value=<%= item.rating %>>
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+						</select>
+						<hr class='hidHr'>
+						<h3 class="itemText">Approval</h3>
+						<hr class='hidHr'>					
+						<select name="approved" class="itemText" value=<%= item.approved %>>
+							<option value='Yes'>Yes</option>
+							<option value='No'>No</option>
+						</select>
+						<hr class='hidHr'>
+						<h3 class="itemText">Active</h3>
+						<hr class='hidHr'>					
+						<input type='text' class="itemText" value=<%= item.active ? 'Yes' : 'No'%>></input>
+						<hr class='hidHr'>
+						<button type="submit" >Submit Edit</button>
+					</div>
+					<hr class='hidHr'>
+					<hr class='hidHr'>
+				</form>
+
+			</div>
+
+
+		</div>		
+</main>
+<%- include('../partials/footer') %>
+</body>
+

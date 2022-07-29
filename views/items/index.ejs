@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="sl-theme-dark">
+<head>
+  <%- include('../partials/head-content') %>
+  <!--<meta name="keywords" content="website, blog, foo, bar"> TODO: add metadata for site
+  <meta name="author" content="John Doe">
+  <meta name="publisher" content="John Doe">
+  <meta name="copyright" content="John Doe">
+  <meta name="description" content="This short description describes my website.">
+  <meta name="page-topic" content="Media">
+  <meta name="page-type" content="Blogging">
+  <meta name="audience" content="Everyone">-->
+</head>
+
+<body>
+	<%- include('../partials/header') %>
+<hr class='hidHr'>
+
+<main class="col">
+	<hr class='hidHr'>
+	<hr class='hidHr'>
+	<h1>Items</h1>
+	<hr>
+	<hr class='hidHr'>
+	<hr class='hidHr'>
+	<hr class='hidHr'>
+	<div class="gridx">
+		<% items.forEach(function(t) { %>
+			<div class="gridItem flex col col100 card between">
+				<div class="flex mobileRow between">
+					<form action="/items/<%= t.id %>?_method=DELETE" class="item-form" method="POST">
+						<button type="submit" class="item-button" title="DELETE">X</button>
+					</form>
+					<!--<a href="/items/<%=t.id%>/edit">Edit Item</a>-->
+				</div>
+				<h3><a href="/items/<%= t.id %>"><%= t.title %></a></h3>
+				<hr>
+				<hr class='hidHr'>
+				<div class="flex row evenly centerAlign">
+					<div class="flex col center centerAlign">
+						<p class="itemText">Age: <%= t.age %></p>
+						<hr class='hidHr'>
+						<p class="itemText"><u>Features</u></p>	
+						<hr class='hidHr'>					
+						<p class="itemText"><%= t.features.join(', ') %></p>						
+					</div>
+					<div class="flex col center centerAlign">
+						<p class="itemText">Rating: <%= t.rating %></p>
+						<hr class='hidHr'>
+						<p class="itemText">Approval: <%= t.approved %></p>
+						<hr class='hidHr'>
+						<p class="itemText">Showing: <%= t.active ? 'Yes' : 'No'%></p>
+						<hr class='hidHr'>
+					</div>
+				</div>
+				<hr class='hidHr'>
+				<hr class='hidHr'>
+
+			</div>
+		<% }); %>
+	</div>
+	<hr class='hidHr'>
+	<hr class='hidHr'>
+	<hr class='hidHr'>
+	<hr>
+	<hr class='hidHr'>
+	<h2>Enter a New Item</h2>
+	<div class='flex col center centerAlign'>
+		<form class='flex col col100 center centerAlign card' action="/items" method="POST" autocomplete="off">
+			<hr class='hidHr'>
+			<div class="flex row evenly">
+				<div class='flex col center centerAlign'>
+					<label class='flex col center centerAlign'>Title
+						<hr class='hidHr'>
+						<input type="text" name="title">
+					</label>
+					<label class='flex col center centerAlign'>Age
+						<hr class='hidHr'>
+						<input type="text" name="age">
+					</label>
+				</div>
+				<div class='flex col center centerAlign'>
+					<label class='flex col center centerAlign'>Features <br>(separate with commas)
+						<hr class='hidHr'>
+						<input type="text" name="features">
+					</label>
+					<div class="flex row evenly centerAlign">
+						<label class='flex col center centerAlign'>Rating
+							<select name="rating">
+							<option value="A">A</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							</select>
+						</label>
+						<label class='flex col center centerAlign'>Approved
+							<select name="approved">
+							<option value='Yes'>Yes</option>
+							<option value='No'>No</option>
+							</select>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class='flex col center centerAlign'>
+				<label class='flex col center centerAlign'>Now Active
+					<hr class='hidHr'>
+					<hr class='hidHr'>
+					<input type="checkbox" name="active" checked>
+				</label>
+				<hr class='hidHr'>
+				<button type="submit">Submit New Item</button>
+				<hr class='hidHr'>
+				<hr class='hidHr'>
+			</div>
+		</form>
+		<hr class='hidHr'>
+		<hr class='hidHr'>
+	</div>
+
+</main>
+
+<%- include('../partials/footer') %>
+</body>

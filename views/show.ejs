@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="sl-theme-dark">
+<head>
+  <%- include('partials/head-content') %>
+  <!--<meta name="keywords" content="website, blog, foo, bar"> TODO: add metadata for site
+  <meta name="author" content="John Doe">
+  <meta name="publisher" content="John Doe">
+  <meta name="copyright" content="John Doe">
+  <meta name="description" content="This short description describes my website.">
+  <meta name="page-topic" content="Media">
+  <meta name="page-type" content="Blogging">
+  <meta name="audience" content="Everyone">-->
+</head>
+<body>
+  <%- include('partials/header') %>
+  <main class='col'>
+      <hr class='hidHr'>
+      <hr class='hidHr'>
+      <h1>Offering 1: Do X</h1>
+      <p id='splashText' >We provide X including x, y, and z.</p>
+      <hr class='hidHr'>
+      <hr>  
+
+      <div id='showBox' class='flex col centerAlign center card'>
+          <div class='flex centerAlign row evenly'>
+              <div class='flex col col60'>
+                  <div class='flex between centerAlign row'>
+                      <div><i id='showFA' class="fas fa-meteor fa-2xl"></i></div>
+                      <div class="col100">
+                          <ul class='col offerlist'>
+                              <li class='showLi'>Point 1: a bunch of interesting thoughts</li>
+                              <li class='showLi'>Point 2: a bunch of interesting thoughts</li>
+                              <li class='showLi'>Point 3: a bunch of interesting thoughts</li>
+                              <li class='showLi'>Point 4: a bunch of interesting thoughts</li>
+                              <li class='showLi'>Point 5: a bunch of interesting thoughts</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <hr class='hidHr'>
+                  <p>Our book editing service will assign a personal editor to edit your book 
+                      or other document. They will send you suggested changes which you can choose 
+                      to approve or reject. You remain in control. Whether conducting simple copy 
+                      editing or developmental editing, our editors always edit with care and concern 
+                      for your book's particular needs. </p>
+              </div>
+              <div class='flex col'>
+                  <h3>Let's Explore doing X - <strong>Reach Out</strong></h3>
+                  <hr class='hidHr'>
+                  <hr class='hidHr'>
+                  <div class='flex mobileRow evenly'>
+                      <a href="tel:15555555555"><img class='contactIcon' src="/images/phoneIcon.png" alt="Phone"/><hr class='hidHr'>PHONE</a> <!--TODO: phone # link image-->
+                      <a href="mailto:name@domain.com?subject=subject text"><img class='contactIcon' src="/images/emailIcon.png" alt="Email"/><hr class='hidHr'>EMAIL</a> <!--TODO: email link image-->
+                  </div>
+                  <hr class='hidHr'>
+                  <form action='https://formsapi.jabwn.com/key/p0yfEvzqAnax9BfZKJew' method='post'> <!--TODO: Unique https://formsapi.jabwn.com/ API-->
+                      <label for='name'>Name</label><hr class='hidHr'>
+                      <hr class='hidHr'>
+                      <input type='text' name='name' required>
+                      <hr class='hidHr'>
+                      <hr class='hidHr'>
+                      <p class='indicator'><span style='color:red'>* </span><small>INDICATES REQUIRED FIELD</small></p>
+                      <hr class='hidHr'>
+                      <hr class='hidHr'>
+                      <label for='email'>Email<span style='color:red'> *</span></label><hr class='hidHr'>
+                      <hr class='hidHr'>
+                      <input type='email' name='email' required>
+                      <hr class='hidHr'>
+                      <hr class='hidHr'>
+                      <label for='phone'>Phone<span style='color:red'> *</span></label><hr class='hidHr'>
+                      <hr class='hidHr'>
+                      <input type='text' name='phone' required>
+                      <hr class='hidHr'>
+                      <hr class='hidHr'>
+                      <input type="hidden" name="_subject" value="Show Page Form"> <!--TODO: Set form name-->
+                      <input type="hidden" name="_replyto" value="%email">
+                      <input type="hidden" name="_after" value="https://www.google.com"> <!--TODO set redirect full path-->
+                      <hr class='hidHr'>
+                      <script></script> <!--TODO: iubunda privacy policy-->
+                      <button type='submit'>Get Your X</button>
+                  </form>
+                  <hr class='hidHr'>
+              </div>
+          </div>
+      </div>
+
+
+      <hr>
+      <div class="flex centerAlign col center">
+          <hr class='hidHr'>
+          <div class="col">
+              <img class="personImg" src="/images/fp1.jpeg" alt="A reviewer's portrait"/>
+          </div>
+          <div class="flex centerAlign col60 col">
+              <blockquote> "They done good. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                  molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                  numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                  optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+                  obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam." </blockquote>
+          </div>
+      </div>
+      <hr class="quoteHr">
+      <hr class='hidHr'>
+
+
+      <div class='col card'>
+          <hr class='hidHr'>
+          <h2>More About Offering 1</h2>
+          <hr class='hidHr'>
+          <p class='explainer'>They done good. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur 
+              voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat 
+              iusto fuga praesentium optio, eaque rerum! Provident similique accusantium 
+              nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto 
+              voluptate aliquam.<br>
+              <br>
+              They done good. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur 
+              voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat 
+              iusto fuga praesentium optio, eaque rerum! Provident similique accusantium 
+              nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto 
+              voluptate aliquam.<br>
+              <br>
+              They done good. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur 
+              voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat 
+              iusto fuga praesentium optio, eaque rerum! Provident similique accusantium 
+              nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto 
+              voluptate aliquam.<br>
+          </p>
+          <div>
+              <form action='https://formsapi.jabwn.com/key/p0yfEvzqAnax9BfZKJew' method='post'> <!--TODO: Unique https://formsapi.jabwn.com/ API-->
+                  <div class='flex row center'>
+                      <div>
+                          <label for='name'>Name</label><hr class='hidHr'>
+                          <hr class='hidHr'>
+                          <input type='text' name='name' required>
+                          <hr class='hidHr'>
+                      </div>
+                      <div>
+                          <label for='email'>Email<span style='color:red'> *</span></label><hr class='hidHr'>
+                          <hr class='hidHr'>
+                          <input type='email' name='email' required>
+                          <hr class='hidHr'>
+                      </div>
+                      <div>
+                          <label for='phone'>Phone<span style='color:red'> *</span></label><hr class='hidHr'>
+                          <hr class='hidHr'>
+                          <input type='text' name='phone' required>
+                          <hr class='hidHr'>
+                      </div>
+                  </div>
+                  <hr class='hidHr'>
+                  <p class='indicator'><span style='color:red'>* </span><small>INDICATES REQUIRED FIELD</small></p>
+                  <hr class='hidHr'>
+                  <input type="hidden" name="_subject" value="Show Page Form2"> <!--TODO: Set form name-->
+                  <input type="hidden" name="_replyto" value="%email">
+                  <input type="hidden" name="_after" value="https://www.google.com"> <!--TODO set redirect full path-->
+                  <hr class='hidHr'>
+                  <script></script> <!--TODO: iubunda privacy policy-->
+                  <button type='submit'>Get Your X</button>
+                  <hr class='hidHr'>
+              </form>
+              <hr class='hidHr'>
+          </div>
+      </div>
+  </main>
+  <%- include('./partials/footer') %>  
+</body>
+</html>
