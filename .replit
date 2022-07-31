@@ -1,13 +1,4 @@
-entrypoint = "server.js"
-
-[interpreter]
-command = [
-    "prybar-nodejs",
-    "-q",
-    "--ps1",
-    "\u0001\u001b[33m\u0002\u0001\u001b[00m\u0002 ",
-    "-i"
-]
+run = "npm run start"
 
 [nix]
 channel = "stable-21_11"

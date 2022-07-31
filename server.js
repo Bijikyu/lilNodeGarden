@@ -12,13 +12,8 @@ require('./config/passport'); // requires config file for passport
 const methodOverride = require('method-override'); // listens to change POST to PUT/DELETE ?_method=DELETE or ?_method=PUT
 
 // Require other modules
-const todoDb = require('./models/todo-db');
-const apiRouter = require('./routes/api');
-const blogsRouter = require('./routes/blogs');
-const commentsRouter = require('./routes/comments');
 const indexRouter = require('./routes/index');
 const itemsRouter = require('./routes/items');
-const todosRouter = require('./routes/todos');
 const usersRouter = require('./routes/users');
 const cors = require('cors');
 
@@ -50,20 +45,9 @@ app.use(methodOverride('_method')); // listens to change POST to PUT/DELETE via 
  	
 // Mount routes
 // Best practice routing
-app.use('/api', apiRouter); 
-app.use('/blogs', blogsRouter); 
-app.use('/comments', commentsRouter); 
 app.use('/', indexRouter);
 app.use('/items', itemsRouter); 
-app.use('/todos', todosRouter);
 app.use('/users', usersRouter);
-// Not best practice routing
-/* app.get('/', (req, res) => {res.render('index')});
-app.get('/about', (req, res) => {res.render('about')});
-app.get('/contact', (req, res) => {res.render('contact')});
-app.get('/display', (req, res) => {res.render('display')});
-app.get('/location', (req, res) => {res.render('location')});
-app.get('/show', (req, res) => {res.render('show')}); */
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

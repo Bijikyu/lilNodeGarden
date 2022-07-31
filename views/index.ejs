@@ -18,7 +18,7 @@
 <main class="col">
     <hr class='hidHr'>
     <hr class='hidHr'>
-    <h1>Title: Do X</h1>
+    <h1>Title</h1>
     <hr>
     <div id='splash' class='flex centerAlign row center'>
         <div class='col50 col'>
@@ -42,17 +42,6 @@
         </div>
     </a>
     <hr class='hidHr'> 
-
-    <div class='col card flex centerAlign'>
-        <h2 id='offerings'>Our Offerings</h2>
-        <hr>
-        <div class='grid'> <!--Item Container-->         
-            <%- include('partials/offering') %>
-            <%- include('partials/offering') %>
-            <%- include('partials/offering') %>
-            <%- include('partials/offering') %>
-        </div>
-    </div>
 
     <hr>
     
@@ -89,7 +78,6 @@
         <img src="<%= userData.avatar_url %>">
         <h2><%= userData.login %></h2>
     </div>
-
     <div>
         <h3>Repos:</h3>
         <% if (userData.repos) { %>
