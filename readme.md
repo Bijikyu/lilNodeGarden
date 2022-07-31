@@ -1,13 +1,6 @@
-Express Generic Site
-
+Express Lite Generic Site
+A small simple but thorough app for testing simple fullstack programming ideas.
 Generic static site using Node, Express, EJS, CSS, with no frontend framework/library, for use as a template.
-
-For back-end site:
-
-DEV TODO:
-* basic ecommerce page
-* fundraising page
-* client-worker connect page
 
 DEPLOY TODOS when implementing instance:
 * Minify all images
